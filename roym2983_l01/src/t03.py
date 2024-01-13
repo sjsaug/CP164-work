@@ -2,9 +2,9 @@
 -------------------------------------------------------
 [program description]
 -------------------------------------------------------
-Author:  Your Name
-ID:      Your ID
-Email:   your email@mylaurier.ca
+Author:  August
+ID:      169052983
+Email:   roym2983@mylaurier.ca
 __updated__ = "2024-01-13"
 -------------------------------------------------------
 """
@@ -20,4 +20,4 @@ food1 = str(get_food())
 
 print(f"""
 {food1}
-""") 
+""")
