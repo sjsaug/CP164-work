@@ -8,7 +8,7 @@ Email:   dbrown@wlu.ca
 __updated__ = "2024-01-13"
 -------------------------------------------------------
 """
-from Food import Food
+from src import Food.Food
 
 
 def get_food():

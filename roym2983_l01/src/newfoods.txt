@@ -1,0 +1,3 @@
+one|1|False|10
+two|2|False|200
+three|3|False|100
