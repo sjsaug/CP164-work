@@ -8,7 +8,7 @@ Email:   dbrown@wlu.ca
 __updated__ = "2024-01-13"
 -------------------------------------------------------
 """
-from src import Food.Food
+from Food import Food
 
 
 def get_food():
@@ -22,12 +22,13 @@ def get_food():
     -------------------------------------------------------
     """
     name = input("Enter the name of the food: ")
-    origin = int(input(f"Enter the origin of the food (0-{len(Food.ORIGIN)-1}): "))
-    is_vegetarian = input("Is the food vegetarian? (yes/no): ").lower() == 'yes'
+    origin = int(
+        input(f"Enter the origin of the food (0-{len(Food.ORIGIN)-1}): "))
+    is_vegetarian = input(
+        "Is the food vegetarian? (yes/no): ").lower() == 'yes'
     calories = int(input("Enter the number of calories in the food: "))
 
     food = Food(name, origin, is_vegetarian, calories)
-
 
     return food
 
@@ -96,7 +97,8 @@ def write_foods(file_variable, foods):
     """
 
     for food in foods:
-        file_variable.write(f"{food.name}|{food.origin}|{food.is_vegetarian}|{food.calories}\n")
+        file_variable.write(
+            f"{food.name}|{food.origin}|{food.is_vegetarian}|{food.calories}\n")
     return
 
 
