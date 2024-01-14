@@ -19,6 +19,7 @@
 	</section>
 	<section name="PreferencesImportWizard">
 		<item key="" value="/Users/august/Downloads/cp104_prefs.epf"/>
+		<item key="" value="/Users/august/Downloads/cp104_prefs.epf"/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="/Users/august/Downloads/cp104_prefs.epf"/>
 		</list>
@@ -27,6 +28,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a01.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l01.zip"/>
 			<item value="roym2983_l01.zip"/>
 		</list>
