@@ -1,12 +1,38 @@
 -- VERSION_5
 -- START DISKCACHE_3
 /Users/august/eclipse/ws/CP164-work/.metadata/.plugins/org.eclipse.core.resources/.projects/roym2983_l01/com.python.pydev.analysis/v2_indexcache
+t01|1705134321805963560|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t01.py
+t03|1705134285384304948|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t03.py
+t02|1705134319487104105|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t02.py
+t05|1705134330290201947|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t05.py
+t04|1705134304722114825|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t04.py
+t07|1705134313301214231|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t07.py
+t06|1705134309710571392|/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t06.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+14
+13=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t01.py
+14=t01
+3=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t07.py
+10=t03
+8=t02
+5=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t05.py
+6=t05
+1=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t06.py
+12=t04
+4=t07
+11=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t04.py
+2=t06
+9=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t03.py
+7=/Users/august/eclipse/ws/CP164-work/roym2983_l01/src/t02.py
 -- END DICTIONARY
 -- START TREE 1
-0
+5
+fh|3|fh!1^17#1*19@fh!3^18#1*35@fh!5^17#1*51@
+foo|7|foodie2!7^18#1*67@foodie!7^17#1*67@food1!9^18#1*83@foodie3!7^19#1*67@foodInfo!11^17#1*99@foods!3^20#1*35@foods!1^20#1*19@
+ite|4|items!7^21#1*67@items3!7^23#1*67@items!5^19#1*51@items2!7^22#1*67@
+ori|1|origin_list!13^17#1*115@
+veg|1|veggies!3^22#1*35@
 -- END TREE
 -- START TREE 2
 0
