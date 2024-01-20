@@ -1,0 +1,109 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author: August Roy McLaughlin
+ID: 169052983
+Email: roym2983@mylaurier.ca 
+Date: '2024-01-20'
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+
+Stack Empty : True
+Stack Empty Post Push : True
+Stack Peek : 30
+Stack Pop : 30
+Stack Peek Post Pop : 20
+Elem : 20
+Elem : 10
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+
+Main : [1, 2, 3, 4, 5]
+Main After : []
+Elem : 1
+Elem : 2
+Elem : 3
+Elem : 4
+Elem : 5
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+
+Target List/Array : [1, 2, 3, 4, 5]
+Stack Empty Post Push : True
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t04 
+
+Stack empty : True
+Stack empty after pushes : False
+Peek at top item : 10
+Popped item : 10
+Popped item : 20
+Popped item : 30
+Stack empty after pops : True
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t05
+
+Stack empty : True
+Stack empty after pushes : False
+Peek at top item : Lasagna (Italian)
+Popped item : Lasagna (Italian)
+Popped item : Butter Chicken (Indian)
+Popped item : Moo Goo Guy Pan (Chinese)
+Popped item : Vegetable Alicha (Ethiopian)
+Popped item : Spanakopita (Greek)
+Popped item : Chirashi Don (Japanese)
+Popped item : Canuck Burger (Canadian)
+Popped item : Turducken (American)
+Popped item : Shark Fin Soup (Chinese)
+Popped item : Chamuco (Mexican)
+Popped item : Natto (Japanese)
+Popped item : Canada Goose Chili (Canadian)
+Popped item : Diet Free-Range Gluten-free Water (American)
+Popped item : Kung Pao Chicken (Chinese)
+Popped item : General Tao Chicken (Chinese)
+Popped item : Spicy Vegetable Moo Shu (Chinese)
+Popped item : BBQ Pork (Chinese)
+Popped item : Orange Chicken (Chinese)
+Popped item : Vegetables with Cashew Nuts (Chinese)
+Popped item : Lemon Chicken (Chinese)
+Popped item : Beef with Green Pepper (Chinese)
+Popped item : Sweet and Sour Pork (Chinese)
+Popped item : Szechuan Shrimp (Chinese)
+Popped item : Poutine (Canadian)
+Popped item : Teppanyaki (Japanese)
+Popped item : Greek Salad (Greek)
+Popped item : Fettuccine (Italian)
+Popped item : Teriyaki (Japanese)
+Popped item : Shortbread  (Scottish)
+Popped item : Pavlova (New Zealand)
+Popped item : Hokey Pokey Ice Cream (New Zealand)
+Popped item : Fricot (Canadian)
+Popped item : Chip Butty (English)
+Popped item : Grilled Salmon (Canadian)
+Popped item : Ravioli (Italian)
+Popped item : Crepe (Italian)
+Popped item : Fried Rice (Chinese)
+Popped item : Pepperoni Pizza (Italian)
+Popped item : Chicken Kabob (Indian)
+Popped item : Panzerotti (Italian)
+Popped item : Spring Rolls (Chinese)
+Popped item : Chicken Chow Mein (Chinese)
+Popped item : Chicken Wings (American)
+Stack empty after pops : True
+
+-------------------------------------------------------
