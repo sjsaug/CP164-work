@@ -19,7 +19,7 @@ MYPY_ARGS=--ignore-missing-imports\r\n--no-strict-optional\r\n--allow-untyped-gl
 NOTIFY_NO_INTERPRETER_1=false
 ON_SOURCE_NOT_FOUND=0
 PUT_LOCAL_IMPORTS_IN_TOP_OF_METHOD=false
-PYDEV_FUNDING_SHOW_AT_TIME_2016=1705389416184
+PYDEV_FUNDING_SHOW_AT_TIME_2016=1737272729212
 PYDEV_NEW_PROJECT_CREATE_PREFERENCES=0
 PYDEV_TEXT_HOVER_MODIFIER_org.python.pydev.combininghover=
 PYLINT_ARGS=--generated-members\=objects\r\n--generated-members\=MyEnum
@@ -41,4 +41,4 @@ WORD_NAVIGATION_STYLE=NATIVE
 eclipse.preferences.version=1
 org.eclipse.ui.texteditor.templates.preferences.format_templates=true
 org.python.pydev.OUTLINE_ALPHA_SORT=true
-org.python.pydev.editor.templates.PyTemplatePreferencesPage=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.python.pydev.editor.templates.python.modules" deleted\="false" description\="Module\: Empty" enabled\="true" id\="org.python.pydev.editor.templates.python.module.empty" name\="&lt;Empty&gt;">"""\r\n-------------------------------------------------------\r\n[program description]\r\n-------------------------------------------------------\r\nAuthor\:  August Roy McLaughlin\r\nID\:      169052983r\nEmail\:   roym2983@mylaurier.ca\r\n__updated__ \= "${isodate}"\r\n-------------------------------------------------------\r\n"""\r\n\# Imports\r\n\r\n\# Constants\r\n\r\ndef func()\:\r\n    """\r\n    -------------------------------------------------------\r\n    description\r\n    Use\: \r\n    -------------------------------------------------------\r\n    Parameters\:\r\n        name - description (type)\r\n    Returns\:\r\n        name - description (type)\r\n    ------------------------------------------------------\r\n    """\r\n</template></templates>
+org.python.pydev.editor.templates.PyTemplatePreferencesPage=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.python.pydev.editor.templates.python.modules" deleted\="false" description\="Module\: Empty" enabled\="true" id\="org.python.pydev.editor.templates.python.module.empty" name\="&lt;Empty&gt;">"""\r\n-------------------------------------------------------\r\n[program description]\r\n-------------------------------------------------------\r\nAuthor\:  August Roy McLaughlin\r\nID\:      169052983\nEmail\:   roym2983@mylaurier.ca\r\n__updated__ \= "${isodate}"\r\n-------------------------------------------------------\r\n"""\r\n\# Imports\r\n\r\n\# Constants\r\n\r\ndef func()\:\r\n    """\r\n    -------------------------------------------------------\r\n    description\r\n    Use\: \r\n    -------------------------------------------------------\r\n    Parameters\:\r\n        name - description (type)\r\n    Returns\:\r\n        name - description (type)\r\n    ------------------------------------------------------\r\n    """\r\n</template></templates>

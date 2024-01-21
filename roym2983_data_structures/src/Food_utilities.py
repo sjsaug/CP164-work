@@ -137,6 +137,7 @@ def by_origin(foods, origin):
     assert origin in range(len(Food.ORIGIN))
 
     # Your code here
+    origins = [food for food in foods if food.origin == origin]
 
     return origins
 
@@ -156,6 +157,8 @@ def average_calories(foods):
     """
 
     # Your code here
+    total_calories = sum(food.calories for food in foods)
+    avg = total_calories / len(foods) if foods else 0
 
     return avg
 
@@ -177,6 +180,9 @@ def calories_by_origin(foods, origin):
     assert origin in range(len(Food.ORIGIN))
 
     # Your code here
+    origin_foods = by_origin(foods, origin)
+    total_calories = sum(food.calories for food in origin_foods)
+    avg = total_calories / len(origin_foods) if origin_foods else 0
 
     return avg
 
@@ -196,6 +202,11 @@ def food_table(foods):
     """
 
     # Your code here
+    print("Food                                Origin       Vegetarian Calories")
+    print("---------------------------------------------------------------")
+    for food in sorted(foods, key=lambda x: x.name):
+        print(f"{food.name:40s} {food.origin:10d} {str(food.is_vegetarian):10s} {food.calories}")
+    print("---------------------------------------------------------------")
 
     return
 
@@ -220,5 +231,11 @@ def food_search(foods, origin, max_cals, is_veg):
     assert origin in range(-1, len(Food.ORIGIN))
 
     # Your code here
+    result = []
+    for food in foods:
+        if origin == -1 or food.origin == origin:
+            if max_cals == 0 or food.calories <= max_cals:
+                if not is_veg or food.is_vegetarian:
+                    result.append(food)
 
     return result
