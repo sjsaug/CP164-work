@@ -1,0 +1,140 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author: August Roy McLaughlin
+ID: 169052983
+Email: roym2983@mylaurier.ca 
+Date: '2024-01-20'
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+
+Stack Empty : True
+Stack Empty Post Push : True
+Stack Peek : 30
+Stack Pop : 30
+Stack Peek Post Pop : 20
+Elem : 20
+Elem : 10
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+
+Contents in queue : [1, 2, 3, 4, 5] 
+
+Top of queue : 1
+Post removal : []
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+
+Source : [1, 2, 3, 4, 5]
+Queue : []
+
+Source : []
+
+Queue : [1, 2, 3, 4, 5]
+
+Source : []
+
+Queue : [1, 2, 3, 4, 5]
+
+Source : [1, 2, 3, 4, 5]
+
+Queue : []
+
+inserted 1 
+is_empty : False
+inserted 2 
+is_empty : False
+inserted 3 
+is_empty : False
+inserted 4 
+is_empty : False
+inserted 5 
+is_empty : False
+peek : 1 
+removed : 1
+peek : 2 
+removed : 2
+peek : 3 
+removed : 3
+peek : 4 
+removed : 4
+peek : 5 
+removed : 5
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t04 
+
+Contents in source list : [5, 4, 3, 2, 1]
+
+Contents in priority queue : [5, 4, 3, 2, 1]
+
+Post removal source : [5, 4, 3, 2, 1]
+
+Post removal pq : []
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t05
+
+Source : [5, 4, 3, 2, 1]
+
+PQ : [5, 4, 3, 2, 1]
+
+Post removal source : [5, 4, 3, 2, 1]
+Post removal PQ : []
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t06
+
+Source : [1, 2, 3, 4, 5]
+
+Queue : []
+
+Source : []
+
+Queue : [1, 2, 3, 4, 5]
+
+Source : []
+
+Queue : [1, 2, 3, 4, 5]
+
+Source : [1, 2, 3, 4, 5]
+
+Queue : []
+
+inserted 1 
+is_empty : False
+inserted 2 
+is_empty : False
+inserted 3 
+is_empty : False
+inserted 4 
+is_empty : False
+inserted 5 
+is_empty : False
+peek : 1 
+removed : 1
+peek : 2 
+removed : 2
+peek : 3 
+removed : 3
+peek : 4 
+removed : 4
+peek : 5 
+removed : 5
+
+-------------------------------------------------------

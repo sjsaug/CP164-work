@@ -77,7 +77,7 @@ class Queue:
         """
 
         # your code here
-
+        self._values.append(deepcopy(value))
         return
 
     def remove(self):
@@ -94,7 +94,7 @@ class Queue:
         assert len(self._values) > 0, "Cannot remove from an empty queue"
 
         # your code here
-
+        value = self._values.pop(0)
         return value
 
     def peek(self):
@@ -111,7 +111,7 @@ class Queue:
         assert len(self._values) > 0, "Cannot peek at an empty queue"
 
         # your code here
-
+        value = deepcopy(self._values[0])
         return value
 
     def __iter__(self):
