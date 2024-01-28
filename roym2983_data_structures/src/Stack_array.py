@@ -5,7 +5,7 @@ Array version of the Stack ADT.
 Author:  David Brown
 ID:      123456789
 Email:   dbrown@wlu.ca
-__updated__ = "2024-01-20"
+__updated__ = "2024-01-28"
 -------------------------------------------------------
 """
 # Imports
@@ -36,7 +36,7 @@ class Stack:
             True if the stack is empty, False otherwise
         -------------------------------------------------------
         """
-            
+
         # Your code here
         return len(self._values) == 0
 
@@ -73,7 +73,6 @@ class Stack:
         # Your code here
         return self._values.pop()
 
-
     def peek(self):
         """
         -------------------------------------------------------
@@ -104,3 +103,44 @@ class Stack:
         """
         for value in self._values[::-1]:
             yield value
+
+    def combine(self, source1, source2):
+        """
+        -------------------------------------------------------
+        Combines two source stacks into the current target stack.
+        When finished, the contents of source1 and source2 are interlaced
+        into target and source1 and source2 are empty.
+        Use: target.combine(source1, source2)
+        -------------------------------------------------------
+        Parameters:
+            source1 - an array-based stack (Stack)
+            source2 - an array-based stack (Stack)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        while not source1.is_empty() and not source2.is_empty():
+            self.push(source1.pop())
+            self.push(source2.pop())
+        while not source1.is_empty():
+            self.push(source1.pop())
+        while not source2.is_empty():
+            self.push(source2.pop())
+        return
+
+    def reverse(self):
+        """
+        -------------------------------------------------------
+        Reverses the contents of the source stack.
+        Use: source.reverse()
+        -------------------------------------------------------
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+        temp = Stack()
+        while not self.is_empty():
+            temp.push(self.pop())
+        while not temp.is_empty():
+            self.push(temp.pop())
+        return
