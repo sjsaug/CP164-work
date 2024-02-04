@@ -1,0 +1,71 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author: August Roy McLaughlin
+ID: 169052983
+Email: roym2983@mylaurier.ca 
+Date: '2024-01-20'
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+
+test (Chinese)
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+
+Index of first item from source using _linear_search: -1
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+
+Post append : [1, 2, 3]
+Post insert of test : ['test', 1, 2, 3]
+Post removal of test : [1, 2, 3]
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t04 
+
+Max value : 5
+Min value : 1
+Test of index(4) : 3
+Test of find(3): 3
+List contains 5 : True
+Test of count(2): 1
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t05
+
+Got item at index 0 : 1
+Set item at index 0 to : 100
+
+-------------------------------------------------------
+-------------------------------------------------------
+t06
+
+Post array to list : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Post list to array : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+-------------------------------------------------------
+-------------------------------------------------------
+t07
+
+After appending source items: <List_array.List object at 0x101154310>
+After inserting 'test' at index 0: <List_array.List object at 0x101154310>
+After removing 'test': <List_array.List object at 0x101154310>
+Index of first item from source: 1
+Count of first item from source: 21
+Minimum value in the list: BBQ Pork (Chinese)
+Maximum value in the list: Vegetables with Cashew Nuts (Chinese)
+
+-------------------------------------------------------
