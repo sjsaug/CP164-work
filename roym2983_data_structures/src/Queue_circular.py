@@ -54,7 +54,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return self._count == 0
 
     def is_full(self):
         """
@@ -67,7 +67,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return self._count == self._capacity
 
     def __len__(self):
         """
@@ -80,7 +80,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return self._count
 
     def __eq__(self, target):
         """
@@ -98,7 +98,14 @@ class Queue:
         ---------------
         """
         # your code here
-        return
+        one_ret = True
+        if self._count != target._count:
+            one_ret = False
+        
+        for i in range(self._count):
+            if self._values[i] != target._values[i]:
+                one_ret = False
+        return one_ret
 
     def insert(self, value):
         """
@@ -115,6 +122,12 @@ class Queue:
         assert self._rear is not None, "Cannot add to a full queue"
 
         # your code here
+        if self._count == len(self._values):
+            raise Exception('Queue full')
+        else:
+            self._values[self._rear] = deepcopy(value)
+            self._rear = (self._rear + 1) % self._capacity
+            self._count += 1
         return
 
     def remove(self):
@@ -131,7 +144,10 @@ class Queue:
         assert self._front is not None, "Cannot remove from an empty queue"
 
         # your code here
-        return
+        value = deepcopy(self._values[self._front])
+        self._front = (self._front + 1) % self._capacity
+        self._count -= 1
+        return value
 
     def peek(self):
         """
@@ -147,7 +163,7 @@ class Queue:
         assert self._count > 0, "Cannot peek at an empty queue"
 
         # your code here
-        return
+        return deepcopy(self._values[self._front])
 
     def __iter__(self):
         """

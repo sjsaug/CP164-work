@@ -6,7 +6,7 @@ Author:  David Brown
 ID:      999999999
 Email:   dbrown@wlu.ca
 Section: CP164 C
-__updated__ = "2024-01-27"
+__updated__ = "2024-02-04"
 -------------------------------------------------------
 """
 from copy import deepcopy
@@ -128,3 +128,52 @@ class Queue:
         """
         for value in self._values:
             yield value
+
+    def __eq__(self, target):
+        """
+        ----------------
+        Determines whether two Queues are equal.
+        Values in self and target are compared and if all values are equal
+        and in the same order, returns True, otherwise returns False.
+        Use: equals = source == target
+        ---------------
+        Parameters:
+            target - a queue (Queue)
+        Returns:
+            equals - True if source contains the same values
+                as target in the same order, otherwise False. (boolean)
+        ---------------
+        """
+        one_ret = True
+        if len(self._values) != len(target._values):
+            one_ret = False
+
+        for i in range(len(self._values)):
+            if self._values[i] != target._values[i]:
+                one_ret = False
+        return one_ret
+
+    def split_alt(self):
+        """
+        -------------------------------------------------------
+        Splits the source queue into separate target queues with values
+        alternating into the targets. At finish source queue is empty.
+        Order of source values is preserved.
+        (iterative algorithm)
+        Use: target1, target2 = source.split_alt()
+        -------------------------------------------------------
+        Returns:
+            target1 - contains alternating values from source (Queue)
+            target2 - contains remaining values from source (Queue)
+        -------------------------------------------------------
+        """
+        target1 = Queue()
+        target2 = Queue()
+        count = 0
+        while len(self._values) != 0:
+            if count % 2 == 0:
+                target1.insert(self._values.pop(0))
+            else:
+                target2.insert(self._values.pop(0))
+            count += 1
+        return target1, target2
