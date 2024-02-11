@@ -9,7 +9,7 @@ __updated__ = "2024-02-03"
 -------------------------------------------------------
 """
 # Imports
-from List_array import *
+from src.List_array import *
 # Constants
 
 lst = List()
