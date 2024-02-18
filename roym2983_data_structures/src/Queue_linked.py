@@ -5,7 +5,7 @@ Linked version of the Queue ADT.
 Author:  David Brown
 ID:      123456789
 Email:   dbrown@wlu.ca
-__updated__ = "2024-02-12"
+__updated__ = "2024-02-18"
 -------------------------------------------------------
 """
 from copy import deepcopy
@@ -58,7 +58,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return (self._count == 0)
 
     def is_full(self):
         """
@@ -71,7 +71,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return False
 
     def __len__(self):
         """
@@ -84,7 +84,7 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        return self._count
 
     def insert(self, value):
         """
@@ -99,6 +99,13 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
+        node = _Queue_Node(value, None)
+        if self._front is None:
+            self._front = node
+        else:
+            self._rear._next = node
+        self._rear = node
+        self._count += 1
         return
 
     def remove(self):
@@ -113,9 +120,12 @@ class Queue:
         -------------------------------------------------------        
         """
         assert self._front is not None, "Cannot remove from an empty queue"
-
         # your code here
-        return
+        val = self._front._value
+        self._front = self._front._next
+        if self._front is None: self._rear = None
+        self._count -= 1
+        return val
 
     def peek(self):
         """
@@ -129,9 +139,8 @@ class Queue:
         -------------------------------------------------------
         """
         assert self._front is not None, "Cannot peek at an empty queue"
-
         # your code here
-        return
+        return deepcopy(self._front._value)
 
     def _move_front_to_rear(self, source):
         """
@@ -148,8 +157,16 @@ class Queue:
         -------------------------------------------------------
         """
         assert source._front is not None, "Cannot move the front of an empty queue"
-
         # your code here
+        node = source._front
+        source._count -= 1
+        source._front = source._front._next
+        if source._front is None: source._rear = None
+        if self._rear is None: self._front = node
+        else: self._rear._next = node
+        node._next = None
+        self._rear = node
+        self._count += 1
         return
 
     def _append_queue(self, source):
@@ -166,8 +183,14 @@ class Queue:
         -------------------------------------------------------
         """
         assert source._front is not None, "Cannot append an empty queue"
-
         # your code here
+        if self._rear is None: self._front = source._front
+        else: self._rear._next = source._front
+        self._rear = source._rear
+        self._count += source._count
+        source._front = None
+        source._rear = None
+        source._count = 0
         return
 
     def combine(self, source1, source2):
@@ -187,6 +210,27 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
+        while not source1.is_empty() or not source2.is_empty():
+            if not source1.is_empty():
+                node = source1._front
+                source1._front = node._next
+                node._next = None
+                if self._rear is None: self._front = node
+                else: self._rear._next = node
+                self._rear = node
+                source1._count -= 1
+                self._count += 1
+            if not source2.is_empty():
+                node = source2._front
+                source2._front = node._next
+                node._next = None
+                if self._rear is None: self._front = node
+                else: self._rear._next = node
+                self._rear = node
+                source2._count -= 1
+                self._count += 1
+        source1._rear = None
+        source2._rear = None
         return
 
     def split_alt(self):
@@ -203,7 +247,15 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        q1, q2 = Queue(), Queue()
+        flip = True
+        while self._front is not None:
+            if flip: q1._move_front_to_rear(self)
+            else: q2._move_front_to_rear(self)
+            flip = not flip
+        target1 = q1
+        target2 = q2
+        return target1, target2
 
     def __eq__(self, target):
         """
@@ -221,7 +273,19 @@ class Queue:
         -------------------------------------------------------
         """
         # your code here
-        return
+        val = True
+        if self._count != target._count:
+            val = False
+        else:
+            n1, n2 = self._front, target._front
+            while n1 is not None and n2 is not None:
+                if n1._value != n2._value:
+                    val = False
+                    break
+                n1, n2 = n1._next, n2._next
+            if n1 is not None or n2 is not None:
+                val = False
+        return val
 
     def __iter__(self):
         """

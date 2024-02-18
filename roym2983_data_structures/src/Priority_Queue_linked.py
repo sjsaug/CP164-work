@@ -5,7 +5,7 @@ linked version of the Priority Queue ADT.
 Author:  David Brown
 ID:      123456789
 Email:   dbrown@wlu.ca
-__updated__ = "2023-05-07"
+__updated__ = "2024-02-17"
 -------------------------------------------------------
 """
 from copy import deepcopy
@@ -57,10 +57,8 @@ class Priority_Queue:
             True if priority queue is empty, False otherwise.
         -------------------------------------------------------
         """
-
-        # Your code here
-
-        return
+        # your code here
+        return (self._count == 0)
 
     def __len__(self):
         """
@@ -72,10 +70,8 @@ class Priority_Queue:
             the number of values in the priority queue.
         -------------------------------------------------------
         """
-
-        # Your code here
-
-        return
+        # your code here
+        return self._count
 
     def insert(self, value):
         """
@@ -90,9 +86,25 @@ class Priority_Queue:
             None
         -------------------------------------------------------
         """
-
-        # Your code here
-
+        # your code here
+        if self._front is None:
+            n = _PQ_Node(value, None)
+            self._front = n
+            self._rear = n
+        elif value < self._front._value:
+            n = _PQ_Node(value, self._front)
+            self._front = n
+        elif value >= self._rear._value:
+            n = _PQ_Node(value, None)
+            self._rear._next = n
+            self._rear = n
+        else:
+            p, c = None, self._front
+            while value >= c._value:
+                p, c = c, c._next
+            n = _PQ_Node(value, c)
+            p._next = n
+        self._count += 1
         return
 
     def remove(self):
@@ -107,11 +119,12 @@ class Priority_Queue:
         -------------------------------------------------------
         """
         assert self._count > 0, "Cannot remove from an empty priority queue"
-
-
-        # Your code here
-
-        return
+        # your code here
+        value = self._front._value
+        self._front = self._front._next
+        if self._front is None: self._rear = None
+        self._count -= 1
+        return value
 
     def peek(self):
         """
@@ -125,11 +138,8 @@ class Priority_Queue:
         -------------------------------------------------------
         """
         assert self._count > 0, "Cannot peek at an empty priority queue"
-
-
-        # Your code here
-
-        return
+        # your code here
+        return deepcopy(self._front._value)
 
     def split_alt(self):
         """
@@ -146,10 +156,15 @@ class Priority_Queue:
                 from the current queue  (Priority_Queue)
         -------------------------------------------------------
         """
-
-        # Your code here
-
-        return
+        # your code here
+        q1, q2 = Priority_Queue(), Priority_Queue()
+        flip = True
+        while self._front is not None:
+            if flip: q1._move_front_to_rear(self)
+            else: q2._move_front_to_rear(self)
+            flip = not flip
+        target1, target2 = q1, q2
+        return target1, target2
 
     def split_key(self, key):
         """
@@ -168,10 +183,13 @@ class Priority_Queue:
                 priority lower than or equal to key (Priority_Queue)
         -------------------------------------------------------
         """
-
-        # Your code here
-
-        return
+        # your code here
+        q1, q2 = Priority_Queue(), Priority_Queue()
+        while self._front is not None:
+            if self._front._value < key: q1._move_front_to_rear(self)
+            else: q2._move_front_to_rear(self)
+        target1, target2 = q1, q2
+        return target1, target2
 
     def combine(self, source1, source2):
         """
@@ -191,9 +209,27 @@ class Priority_Queue:
             None
         -------------------------------------------------------
         """
-
-        # Your code here
-
+        # your code here
+        self._front = self._rear = None
+        self._count = 0
+        c1, c2 = source1._front, source2._front
+        last = None
+        while c1 is not None or c2 is not None:
+            if c2 is None or (c1 is not None and c1._value < c2._value):
+                next, c1 = c1, c1._next
+            else:
+                next, c2 = c2, c2._next
+            if last is None:
+                self._front = next
+            else:
+                last._next = next
+            last = next
+            self._count += 1
+        self._rear = last
+        source1._front = source1._rear = None
+        source1._count = 0
+        source2._front = source2._rear = None
+        source2._count = 0
         return
 
     def _append_queue(self, source):
@@ -210,10 +246,14 @@ class Priority_Queue:
         -------------------------------------------------------
         """
         assert source._front is not None, "Cannot append an empty priority queue"
-
-
-        # Your code here
-
+        # your code here
+        if self._rear is None: self._front = source._front
+        else: self._rear._next = source._front
+        self._rear = source._rear
+        self._count += source._count
+        source._front = None
+        source._rear = None
+        source._count = 0
         return
 
     def _move_front_to_rear(self, source):
@@ -231,10 +271,16 @@ class Priority_Queue:
         -------------------------------------------------------
         """
         assert source._front is not None, "Cannot move the front of an empty priority queue"
-
-
-        # Your code here
-
+        # your code here
+        node = source._front
+        source._count -= 1
+        source._front = source._front._next
+        if source._front is None: source._rear = None
+        if self._rear is None: self._front = node
+        else: self._rear._next = node
+        node._next = None
+        self._rear = node
+        self._count += 1
         return
 
     def __iter__(self):

@@ -3,6 +3,7 @@
 	<name>roym2983_a06</name>
 	<comment></comment>
 	<projects>
+		<project>roym2983_data_structures</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

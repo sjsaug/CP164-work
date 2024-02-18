@@ -1,0 +1,59 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author: August Roy McLaughlin
+ID: 169052983
+Email: roym2983@mylaurier.ca 
+Date: '2024-02-18'
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+
+Q1 empty : False
+Q2 empty : False
+Q1 peek : 1
+Q2 peek : 5
+Q1 remobe : 1
+Q2 remove : 5
+Q3 combine : Q1 and Q2 :  2 6 3 7 4 8 9
+Q1 splitting Q3 :  2 3 4 9
+Q2 splitting Q3 :  6 7 8
+Q1 len : 4
+Q2 len : 3
+Q1 post append of Q2 :  2 3 4 9 6 7 8
+Q1 equal nq : False
+Q1 equal to nq post append : False
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+
+pq1 remove : 1
+pq1 peek : 2
+pq1 empty : False
+pq1 len : 4
+t1 post split_alt :  6 8 10
+t2 post split_alt :  7 9
+t3 post split_key k=5 :  1 2 3 4
+t4 post split_key k=5 :  5
+cpq post combine pq1 and t4 :  2 3 4 5 5
+iter cpq :  2 3 4 5 5
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+
+d post insert rear :  1 2 3 4 5
+d post insert front :  -4 -3 -2 -1 0 1 2 3 4 5
+d remove front : -4, d remove rear : 5
+d peek front : -3, d peek rear : 4
+d empty : False
+d len : 8
+d equal d2 : False
+iter d :  -3 -2 -1 0 1 2 3 4
+
+-------------------------------------------------------
