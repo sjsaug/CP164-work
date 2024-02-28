@@ -8,7 +8,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 	<section name="ImportExportAction">
-		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.Preferences"/>
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ExternalProject"/>
 		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
@@ -27,6 +27,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_m.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a06.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l06.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a05.zip"/>
@@ -41,5 +42,7 @@
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l01.zip"/>
 			<item value="roym2983_l01.zip"/>
 		</list>
+	</section>
+	<section name="ZipFileImportWizard">
 	</section>
 </section>
