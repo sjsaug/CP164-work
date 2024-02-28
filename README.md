@@ -12,4 +12,4 @@ Come on guys just don't copy my code, please only use it for the intended uses m
 
 ### Code Validity
 Labs A+ (100%)
-<br/>Assignments A
+<br/>Assignments A+
