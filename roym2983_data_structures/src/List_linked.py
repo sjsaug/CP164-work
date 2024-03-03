@@ -646,25 +646,6 @@ class List:
         # your code here
         return
 
-    def split_alt_r(self):
-        """
-        -------------------------------------------------------
-        Split a list into two parts. even contains the even indexed
-        elements, odd contains the odd indexed elements. At finish
-        self is empty.
-        Order of even and odd is not significant.
-        (recursive version)
-        Use: even, odd = lst.split_alt()
-        -------------------------------------------------------
-        Returns:
-            even - the even numbered elements of the list (List)
-            odd - the odd numbered elements of the list (List)
-                The List is empty.
-        -------------------------------------------------------
-        """
-        # your code here
-        return
-
     def _linear_search_r(self, key):
         """
         -------------------------------------------------------
