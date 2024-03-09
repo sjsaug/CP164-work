@@ -12,5 +12,9 @@ Come on guys just don't copy my code, please only use it for the intended uses m
 
 ### Code Validity
 Labs A+ (100%)
+<<<<<<< HEAD
 <br/>Assignments A+
 <br/>Midterm : 100% (70/70)
+=======
+<br/>Assignments A+
+>>>>>>> f271dc9 (l08)
