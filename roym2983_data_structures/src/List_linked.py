@@ -229,7 +229,12 @@ class List:
         assert self._front is not None, "Cannot remove from an empty list"
 
         # your code here
-        return
+        value = self._front._value
+        self._front = self._front._next
+        if self._front is None:
+            self._rear = None
+        self._count -= 1
+        return value
 
     def remove_many(self, key):
         """
@@ -244,6 +249,21 @@ class List:
         -------------------------------------------------------
         """
         # your code here
+        previous = None
+        current = self._front
+        while current is not None:
+            if current._value == key:
+                if current is self._front:
+                    self._front = self._front._next
+                else:
+                    previous._next = current._next
+                if current is self._rear:
+                    self._rear = previous
+                self._count -= 1
+                current = current._next
+            else:
+                previous = current
+                current = current._next
         return
 
     def find(self, key):
@@ -497,6 +517,21 @@ class List:
         -------------------------------------------------------
         """
         # your code here
+        current = self._front
+        while current is not None:
+            value = current._value
+            previous = current
+            node = current._next
+            while node is not None:
+                if node._value == value:
+                    previous._next = node._next
+                    if node is self._rear:
+                        self._rear = previous
+                    self._count -= 1
+                else:
+                    previous = node
+                node = node._next
+            current = current._next
         return
 
     def pop(self, *args):
@@ -595,7 +630,19 @@ class List:
         -------------------------------------------------------
         """
         # your code here
-        return
+        equals = True
+        if self._count != target._count:
+            equals = False
+        else:
+            source_node = self._front
+            target_node = target._front
+            while source_node is not None and equals:
+                if source_node._value != target_node._value:
+                    equals = False
+                else:
+                    source_node = source_node._next
+                    target_node = target_node._next
+        return equals
 
     def identical_r(self, other):
         """
@@ -627,7 +674,27 @@ class List:
         -------------------------------------------------------
         """
         # your code here
-        return
+        t1 = List()
+        t2 = List()
+        previous = None
+        current = self._front
+        midpoint = ((self._count // 2) + (self._count % 2))
+        for j in range(midpoint):
+            previous = current
+            current = current._next
+        if previous is not None:
+            previous._next = None
+        t1._front = self._front
+        t2._front = current
+        t1._rear = previous
+        t1._count = midpoint
+        t2._count = self._count - midpoint
+        if t2._count > 0:
+            t2._rear = self._rear
+        self._count = 0
+        self._front = None
+        self._rear = None
+        return t1, t2
 
     def split_alt(self):
         """
@@ -910,6 +977,13 @@ class List:
         -------------------------------------------------------
         """
         # your code here
+        while source1._front is not None and source2._front is not None:
+            self._move_front_to_rear(source1)
+            self._move_front_to_rear(source2)
+        while source1._front is not None:
+            self._move_front_to_rear(source1)
+        while source2._front is not None:
+            self._move_front_to_rear(source2)
         return
 
     def combine_r(self, source1, source2):
