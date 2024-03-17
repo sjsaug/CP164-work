@@ -35,6 +35,19 @@ def do_comparisons(file_variable, bst):
         node.comparisons = 0
 
     # your code here
+    line = file_variable.readline()
+    lines = []
+    while line != '':
+        lines.append(line)
+        line = line.strip()
+        line = file_variable.readline()
+        
+    for line in lines:
+        for letter in line:
+            if letter.isalpha():
+                temp_letter = Letter(letter.upper())
+                bst.retrieve(temp_letter)
+    return
 
 
 def comparison_total(bst):
@@ -50,6 +63,10 @@ def comparison_total(bst):
             Letter objects (int)
     -------------------------------------------------------
     """
+    total = 0
+    for node in bst.inorder():
+        total += do_comparisons(bst, node)
+    return total
 
 
 def letter_table(bst):
@@ -64,3 +81,8 @@ def letter_table(bst):
         None
     -------------------------------------------------------
     """
+    print("Letter  Count  Comparisons")
+    print("------  -----  -----------")
+    for node in bst.inorder():
+        print(node)
+    return
