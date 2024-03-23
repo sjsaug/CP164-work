@@ -14,3 +14,10 @@ Come on guys just don't copy my code, please only use it for the intended uses m
 Labs A+ (100%)
 <br/>Assignments A+
 <br/>Midterm : 100% (70/70)
+
+### Academic Integrity
+If this repository violates any standing academic integrity regulations please notify me by 
+- email (roym2983@mylaurier.ca | hi@augustrm.me)
+- by the contact form on my website (https://augustrm.me)
+
+<br/>and I will take down the repository ASAP
