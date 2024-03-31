@@ -725,13 +725,27 @@ class Sorts:
             None
         -------------------------------------------------------
         """
-        n = len(a)
-        max_value = max(a)
-        exp = 1
-
-        while max_value // exp > 0:
-            Sorts._count_sort(a, exp)
-            exp *= 10
+        array = [[], [], [], [], [], [], [], [], [], []]
+        max = 0
+        mn = max + 1
+        for j in a:
+            num_length = len(str(j))
+            if num_length > max:
+                max = num_length
+        for i in range(1, mn):
+            for num in a:
+                num_len = len(str(num))
+                if num_len >= i:
+                    digit = str(num)[-i]
+                    digit = int(digit)
+                    array[digit].append(num)
+                else:
+                    array[0].append(num)
+            a.clear()
+            for slot in array:
+                for x in slot:
+                    a.append(x)
+            array = [[], [], [], [], [], [], [], [], [], []]
         return
 
     @staticmethod
@@ -747,13 +761,12 @@ class Sorts:
             None
         -------------------------------------------------------
         """
-        i = 0
-        n = len(a)
+        gnome = 0
 
-        while i < n:
-            if i == 0 or a[i] >= a[i - 1]:
-                i += 1
+        while gnome < len(a):
+            if gnome == 0 or a[gnome - 1] <= a[gnome]:
+                gnome += 1
             else:
-                Sorts._swap(a, i, i - 1)
-                i -= 1
+                Sorts._swap(a, gnome, gnome - 1)
+                gnome -= 1
         return
