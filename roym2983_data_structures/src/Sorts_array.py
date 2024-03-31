@@ -725,6 +725,14 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+        n = len(a)
+        max_value = max(a)
+        exp = 1
+
+        while max_value // exp > 0:
+            Sorts._count_sort(a, exp)
+            exp *= 10
+        return
 
     @staticmethod
     def gnome_sort(a):
@@ -739,3 +747,13 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+        i = 0
+        n = len(a)
+
+        while i < n:
+            if i == 0 or a[i] >= a[i - 1]:
+                i += 1
+            else:
+                Sorts._swap(a, i, i - 1)
+                i -= 1
+        return

@@ -398,3 +398,17 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+        max_num = a.max()
+        num_digits = int(floor(log10(max_num))) + 1
+        buckets = []
+        for _ in range(10):
+            buckets.append(List())
+        for i in range(num_digits):
+            while a._front is not None:
+                num = a._front._value
+                digit = (num // 10 ** i) % 10
+                buckets[digit]._move_front_to_rear(a)
+            for bucket in buckets:
+                if not bucket.is_empty():
+                    a._append_list(bucket)
+        return

@@ -566,3 +566,15 @@ class Sorts:
             None
         -------------------------------------------------------
         """
+        current = a._front
+
+        while current is not None:
+
+            if current._prev is None or current._value >= current._prev._value:
+                current = current._next
+            else:
+                Sorts.swaps += 1
+                a._swap(current, current._prev)
+                current = current._prev
+
+        return
