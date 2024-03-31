@@ -711,3 +711,31 @@ class Sorts:
 
         a[i] = a[j]
         return
+    
+    @staticmethod
+    def radix_sort(a):
+        """
+        -------------------------------------------------------
+        Performs a base 10 radix sort.
+        Use: Sorts.radix_sort(a)
+        -------------------------------------------------------
+        Parameters:
+            a - an array of base 10 integers (list)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
+
+    @staticmethod
+    def gnome_sort(a):
+        """
+        -------------------------------------------------------
+        Sorts an array using the Gnome Sort algorithm.
+        Use: gnome_sort(a)
+        -------------------------------------------------------
+        Parameters:
+            a - an array of comparable elements (list)
+        Returns:
+            None
+        -------------------------------------------------------
+        """
