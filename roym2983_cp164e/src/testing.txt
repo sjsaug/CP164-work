@@ -1,0 +1,146 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author: August Roy McLaughlin
+ID: 169052983
+Email: roym2983@mylaurier.ca 
+Date: '2024-05-23'
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+test_BST.py
+
+BST_linked Testing
+------------------------------------------------------------
+Test 'flip'
+
+  Inorder: [6, 7, 8, 9, 11, 12, 15, 18]
+  Inorder: [18, 15, 12, 11, 9, 8, 7, 6]
+------------------------------------------------------------
+Test 'are_flipped'
+
+  are_flipped: None
+
+  are_flipped: False
+
+  are_flipped: False
+
+------------------------------------------------------------
+Test 'total_height'
+
+  total height: 8
+------------------------------------------------------------
+Test 'furthest'
+
+  Preorder: []
+  Furthest: []
+
+  Preorder: [11]
+  Furthest: [11, 11]
+
+  Preorder: [11, 7, 6, 9, 8, 15, 12, 18]
+  Furthest: [6, 18]
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+-------------------------------------------------------
+test_Deque.py
+
+Deque_linked Testing
+------------------------------------------------------------
+Test 'is_mirror'
+
+    Deque: [6, 4, 2, 6, 7, 6, 8, 3] - mirror: False
+    Deque: [1, 2, 3, 2, 1] - mirror: True
+------------------------------------------------------------
+Test 'append_front'
+
+    Deque: [6, 4, 2, 6, 7, 6, 8, 3]
+    After 'append_front': [4, 2, 6, 7, 6, 8, 3, 6]
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+-------------------------------------------------------
+test_List.py
+
+List_linked Testing
+------------------------------------------------------------
+Test 'split_count'
+
+source: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+target1, target2 = source.split_count(0)
+  target1: []
+  target2: []
+  source: []
+
+
+source: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+target1, target2 = source.split_count(99)
+  target1: []
+  target2: []
+  source: []
+
+
+source: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+target1, target2 = source.split_count(5)
+  target1: []
+  target2: []
+  source: []
+
+
+------------------------------------------------------------
+Test 'replace_many'
+
+  List: []
+  After 'replace_many(9, -1)': []
+
+  List: [9, 9, 9, 9, 9, 9]
+  After 'replace_many(9, 8)': [8, 8, 8, 8, 8, 8]
+
+  List: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+  After 'replace_many(6, 0)': [3, 8, 0, 7, 7, 0, 2, 2, 2, 4, 12]
+
+------------------------------------------------------------
+Test 'rotate_rear'
+
+  List: []
+  After 'rotate_rear': []
+
+  List: [3]
+  After 'rotate_rear': [3]
+
+  List: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+  After 'rotate_rear': [12, 3, 8, 6, 7, 7, 6, 2, 2, 2, 4]
+
+------------------------------------------------------------
+Test 'has_loop'
+
+  List: []
+  Has Loop: False
+
+  List: [3, 8, 6, 7, 7, 6, 2, 2, 2, 4, 12]
+  Has Loop: False
+
+  source._rear._next = source._rear
+  Has Loop: True
+
+  source._front._next._next._next = source._front._next
+  Has Loop: True
+
+  source._front._next = source._front
+  Has Loop: True
+
+-------------------------------------------------------

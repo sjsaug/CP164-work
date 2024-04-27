@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialog">
 		<item key="DIALOG_X_ORIGIN" value="30"/>
-		<item key="DIALOG_Y_ORIGIN" value="-61"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="964"/>
-		<item key="DIALOG_HEIGHT" value="722"/>
+		<item key="DIALOG_HEIGHT" value="912"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 	<section name="ImportExportAction">
@@ -27,6 +27,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_cp164e.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a10.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l10.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a08.zip"/>
@@ -46,7 +47,6 @@
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l02.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_a01.zip"/>
 			<item value="/Users/august/Library/Mobile Documents/com~apple~CloudDocs/Uni/CP164 exports/roym2983_l01.zip"/>
-			<item value="roym2983_l01.zip"/>
 		</list>
 	</section>
 	<section name="ZipFileImportWizard">
