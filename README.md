@@ -11,9 +11,10 @@ I am making this repo public in hopes that it will prove useful to people.
 Come on guys just don't copy my code, please only use it for the intended uses mentioned above.
 
 ### Code Validity
-Labs A+ (100%)
+Labs A+
 <br/>Assignments A+
 <br/>Midterm : 100% (70/70)
+<br/>Final Exam : 94%
 
 ### Academic Integrity
 If this repository violates any standing academic integrity regulations please notify me by 
